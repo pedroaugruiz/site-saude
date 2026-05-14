@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #f8fafc;
+}
+
+/* CONTAINER GERAL */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+/* HERO SECTION */
+
+.hero {
+  width: 100%;
+  background: linear-gradient(135deg, #06b6d4, #2563eb);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  padding: 80px 30px 140px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+}
+
+.subtitle {
+  font-size: 120px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  opacity: 0.95;
+  letter-spacing: 0.5px;
+  font-family: "Roboto";
+}
+
+.heroContent h1 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-family: "Roboto";
+}
+
+.description {
+  max-width: 700px;
+  font-size: 18px;
+  font-family: "Roboto";
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* MAIN CONTENT */
+
+.main {
+  max-width: 1200px;
+  margin: -70px auto 0;
+  padding: 0 20px 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/* BLOCO DE TÍTULO */
+
+.infoBox {
+  background: white;
+  border-radius: 28px;
+  padding: 35px;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.06);
+  margin-bottom: 35px;
+}
+
+.infoBox h2 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Roboto";
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.infoBox p {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* GRID DOS CARDS */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* CARD */
+
+.card {
+  background: white;
+  border-radius: 28px;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.03);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(15, 23, 42, 0.08);
+}
+
+/* ÍCONE */
+
+.iconBox {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: #ecfeff;
+  color: #0891b2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+/* TEXTOS DO CARD */
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* BOTÃO */
+
+.card button {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 14px;
+  border-radius: 18px;
+  background: #0f172a;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card button:hover {
+  opacity: 0.92;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 992px) {
+  .heroContent h1 {
+    font-size: 42px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px 110px;
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+  }
+
+  .heroContent h1 {
+    font-size: 34px;
+  }
+
+  .main {
+    margin-top: -50px;
+    padding: 0 16px 50px;
+  }
+
+  .infoBox {
+    padding: 25px;
+    border-radius: 22px;
+  }
+
+  .infoBox h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 24px;
+    border-radius: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

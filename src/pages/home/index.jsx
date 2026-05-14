@@ -1,13 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
 import styles from "./index.module.css";
+
 import {
-  BookOpen,
-  HeartPulse,
-  ClipboardList,
-  Pill,
-  Activity,
-  Ambulance,
+  Syringe,
+  Scale,
+  Droplets,
+  Dumbbell,
+  Apple,
+  Brain,
 } from "lucide-react";
 
 export default function Home() {
@@ -15,67 +17,79 @@ export default function Home() {
 
   const cards = [
     {
-      title: "Consultas Médicas",
-      description: "Agende consultas e acompanhe especialistas.",
-      icon: <HeartPulse size={34} />,
-      rota: "/consultas",
+      title: "Vacinação",
+      description:
+        "Informações sobre vacinas, prevenção e calendário vacinal.",
+      icon: <Syringe size={32} />,
+      rota: "/vacinacao",
     },
     {
-      title: "Exames",
-      description: "Resultados, histórico e acompanhamento.",
-      icon: <ClipboardList size={34} />,
-      rota: "/exames",
+      title: "IMC",
+      description:
+        "Calcule seu índice de massa corporal e acompanhe sua saúde.",
+      icon: <Scale size={32} />,
+      rota: "/imc",
     },
     {
-      title: "Medicamentos",
-      description: "Controle remédios e horários facilmente.",
-      icon: <Pill size={34} />,
-      rota: "/medicamentos",
+      title: "Beber Água",
+      description:
+        "Descubra a importância da hidratação para o corpo e mente.",
+      icon: <Droplets size={32} />,
+      rota: "/beberagua",
     },
     {
-      title: "Monitoramento",
-      description: "Pressão, glicemia e frequência cardíaca.",
-      icon: <Activity size={34} />,
-      rota: "/monitoramento",
+      title: "Esporte Físico",
+      description:
+        "Benefícios das atividades físicas para qualidade de vida.",
+      icon: <Dumbbell size={32} />,
+      rota: "/esportefisico",
     },
     {
-      title: "Emergência",
-      description: "Acesso rápido para suporte urgente.",
-      icon: <Ambulance size={34} />,
-      rota: "/emergencia",
+      title: "Alimentação",
+      description:
+        "Dicas nutricionais para manter uma rotina equilibrada.",
+      icon: <Apple size={32} />,
+      rota: "/alimentacao",
     },
     {
-      title: "Bem-estar",
-      description: "Saúde física, mental e qualidade de vida.",
-      icon: <BookOpen size={34} />,
-      rota: "/bem-estar",
+      title: "Saúde Mental",
+      description:
+        "Cuidados emocionais, bem-estar psicológico e equilíbrio.",
+      icon: <Brain size={32} />,
+      rota: "/saudemental",
     },
   ];
 
   return (
     <div className={styles.container}>
       <header className={styles.hero}>
+        <div className={styles.overlay}></div>
+
         <div className={styles.heroContent}>
-          <p className={styles.subtitle}>Portal Saúde+</p>
+          <span className={styles.badge}>Portal Vida+</span>
 
           <h1>
-            Cuidar da sua saúde
+            Sua saúde
             <br />
-            ficou mais simples
+            em primeiro lugar
           </h1>
 
-          <p className={styles.description}>
-            Um ambiente moderno para consultas, exames, monitoramento e bem-estar.
+          <p>
+            Informações importantes para melhorar sua qualidade de vida,
+            prevenir doenças e manter hábitos saudáveis diariamente.
           </p>
         </div>
       </header>
 
       <main className={styles.main}>
         <section className={styles.infoBox}>
-          <h2>Serviços disponíveis</h2>
-          <p>
-            Escolha uma área para acessar informações e recursos importantes.
-          </p>
+          <div>
+            <h2>Áreas de cuidado</h2>
+
+            <p>
+              Explore conteúdos educativos e recursos voltados ao seu bem-estar.
+            </p>
+          </div>
         </section>
 
         <section className={styles.grid}>
@@ -90,9 +104,10 @@ export default function Home() {
               </div>
 
               <h3>{card.title}</h3>
+
               <p>{card.description}</p>
 
-              <button>Acessar</button>
+              <button>Ver conteúdo</button>
             </div>
           ))}
         </section>
