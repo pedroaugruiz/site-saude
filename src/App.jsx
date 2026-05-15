@@ -11,6 +11,7 @@ import Alimentacao from "./pages/alimentacao";
 import Agua from "./pages/beberagua";
 import Esporte from "./pages/esporte";
 import SaudeMental from "./pages/mental";
+import IMC from "./pages/imc"
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Route path="/alimentacao" element={<Alimentacao />} />
         <Route path="/beberagua" element={<Agua />} />
         <Route path="/saudemental" element={<SaudeMental />} />
-        {/* <Route path="/imc" element={<IMC />} /> */}
+        <Route path="/imc" element={<IMC />} />
         <Route path="/esportefisico" element={<Esporte />} /> 
       </Routes>
     </BrowserRouter>
